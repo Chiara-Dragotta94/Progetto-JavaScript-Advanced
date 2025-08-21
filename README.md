@@ -62,7 +62,7 @@ docs/
 ---
 
 ## Istruzioni per l’Uso
-1. Apri `index.html` nel browser.  
+1. Apri https://chiara-dragotta94.github.io/Progetto-JavaScript-Advanced/) nel browser.  
 2. Naviga tra le pagine tramite il menu principale.  
 3. Per la ricerca dei libri:
    - Inserisci la categoria nella barra di ricerca.  
