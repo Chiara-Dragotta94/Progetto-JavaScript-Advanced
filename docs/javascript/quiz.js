@@ -757,7 +757,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  alert(`Hai ottenuto ${punteggio} su ${domandeScelte.length} risposte corrette!`);
+  // Rimuovi eventuale messaggio precedente
+const oldResult = document.getElementById("quizResult");
+if (oldResult) oldResult.remove();
+
+// Crea e mostra il risultato nel contenitore quiz
+const resultDiv = document.createElement("div");
+resultDiv.id = "quizResult";
+resultDiv.style.marginTop = "20px";
+resultDiv.style.fontWeight = "bold";
+resultDiv.style.fontSize = "1.2em";
+resultDiv.textContent = `Hai ottenuto ${punteggio} su ${domandeScelte.length} risposte corrette!`;
+quizContainer.appendChild(resultDiv);
 
   //Toglie la possibilità di cliccare sulle opzioni dopo che si sono inviate le risposte//
   const tuttiInput = document.querySelectorAll('input[type="radio"]');
