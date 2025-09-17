@@ -10,7 +10,7 @@ module.exports = {
   // Dove mettere il bundle finale
   output: {
     filename: 'bundle.js',           // Nome del file bundle
-    path: path.resolve(__dirname, 'js'), // Lo mettiamo nella stessa cartella js
+    path: path.resolve(__dirname, 'javascript'), // Lo mettiamo nella stessa cartella js
     clean: true,                     // Pulisce il bundle precedente
   },
 
