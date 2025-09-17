@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Per ogni continente cliccabile dentro il globo...
-  globo.querySelectorAll(".continent").forEach(el => {
+  _.forEach(globo.querySelectorAll(".continent"), el => {
     el.addEventListener("click", (e) => {
       // Impedisce che il click si propaghi oltre (evita la chiusura automatica del box)
       e.stopPropagation();
@@ -50,21 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
       let x = elRect.left - rect.left + elRect.width / 2; // centro in orizzontale
       let y = elRect.top - rect.top + elRect.height / 2;  // centro in verticale
 
-     // Centra la infoBox sopra il bottone cliccato
-x = x - 115; // 230 / 2
-y = y - 80;
+      // Centra la infoBox sopra il bottone cliccato
+      x = x - 115; // 230 / 2
+      y = y - 80;
 
-// Controlli per non uscire fuori
-if (x < 0) x = 0;
-if (x + 230 > rect.width) x = rect.width - 230;
-if (y < 0) y = 0;
-if (y + 120 > rect.height) y = rect.height - 120;
+      // Controlli per non uscire fuori
+      if (x < 0) x = 0;
+      if (x + 230 > rect.width) x = rect.width - 230;
+      if (y < 0) y = 0;
+      if (y + 120 > rect.height) y = rect.height - 120;
 
-// Posiziona e mostra la infoBox
-infoBox.style.left = `${x}px`;
-infoBox.style.top = `${y}px`;
-infoBox.hidden = false;
-
+      // Posiziona e mostra la infoBox
+      infoBox.style.left = `${x}px`;
+      infoBox.style.top = `${y}px`;
+      infoBox.hidden = false;
     });
   });
 

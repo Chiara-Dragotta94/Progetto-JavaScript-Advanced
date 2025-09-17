@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (valid) {
         alert("Messaggio inviato correttamente!");
         contactForm.reset(); // Pulisce i campi del form
-        [nameField, emailField, messageField].forEach((field) =>
+        _.forEach([nameField, emailField, messageField], (field) =>
           field.classList.remove("is-valid")
         );
       }
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (valid) {
         alert("Registrazione avvenuta con successo!");
         registerForm.reset();
-        [name, email, password].forEach((field) =>
+        _.forEach([name, email, password], (field) =>
           field.classList.remove("is-valid")
         );
       }
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (valid) {
         alert("Ciao, " + name.value.trim() + "!");
         loginForm.reset();
-        [name, email, password].forEach((field) =>
+        _.forEach([name, email, password], (field) =>
           field.classList.remove("is-valid")
         );
       }

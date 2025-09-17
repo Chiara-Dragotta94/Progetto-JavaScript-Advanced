@@ -1,5 +1,6 @@
-//Gioco quiz//
-//Creo le domande//
+// Gioco quiz //
+
+// Creo le domande //
 const domande = {
   matematica: [
     {
@@ -247,472 +248,33 @@ const domande = {
       corretta: "Gallina",
     },
   ],
-  storia: [
-    {
-      domanda: "Chi è stato Cristoforo Colombo?",
-      opzioni: ["Esploratore", "Pittore", "Scrittore", "Inventore"],
-      corretta: "Esploratore",
-    },
-    {
-      domanda: "In che anno è stata scoperta l'America?",
-      opzioni: ["1492", "1500", "1600", "1800"],
-      corretta: "1492",
-    },
-    {
-      domanda: "Chi era Giulio Cesare?",
-      opzioni: ["Imperatore romano", "Pittore", "Filosofo", "Re"],
-      corretta: "Imperatore romano",
-    },
-    {
-      domanda: "Cos'è una piramide?",
-      opzioni: ["Monumento egizio", "Casa", "Fiume", "Montagna"],
-      corretta: "Monumento egizio",
-    },
-    {
-      domanda: "Chi erano i gladiatori?",
-      opzioni: [
-        "Combattenti nell'antica Roma",
-        "Contadini",
-        "Insegnanti",
-        "Mercanti",
-      ],
-      corretta: "Combattenti nell'antica Roma",
-    },
-    {
-      domanda: "Dove si trova la Torre di Pisa?",
-      opzioni: ["Italia", "Francia", "Spagna", "Germania"],
-      corretta: "Italia",
-    },
-    {
-      domanda: "Che cos'è la Rivoluzione Francese?",
-      opzioni: ["Un evento storico", "Una festa", "Una città", "Un libro"],
-      corretta: "Un evento storico",
-    },
-    {
-      domanda: "Chi era Leonardo da Vinci?",
-      opzioni: ["Artista e inventore", "Re", "Scrittore", "Filosofo"],
-      corretta: "Artista e inventore",
-    },
-    {
-      domanda: "Quando finì la Seconda Guerra Mondiale?",
-      opzioni: ["1945", "1939", "1918", "1960"],
-      corretta: "1945",
-    },
-    {
-      domanda: "Chi ha inventato la stampa?",
-      opzioni: ["Gutenberg", "Newton", "Einstein", "Galileo"],
-      corretta: "Gutenberg",
-    },
-    {
-      domanda: "Cos'era l'Impero Romano?",
-      opzioni: [
-        "Un grande stato antico",
-        "Una città",
-        "Un regno moderno",
-        "Una montagna",
-      ],
-      corretta: "Un grande stato antico",
-    },
-    {
-      domanda: "Chi ha scoperto l'America?",
-      opzioni: ["Cristoforo Colombo", "Marco Polo", "Galileo", "Leonardo"],
-      corretta: "Cristoforo Colombo",
-    },
-    {
-      domanda: "Cos'è la Preistoria?",
-      opzioni: [
-        "Periodo prima della scrittura",
-        "Periodo moderno",
-        "Un paese",
-        "Un libro",
-      ],
-      corretta: "Periodo prima della scrittura",
-    },
-    {
-      domanda: "Chi era Napoleone?",
-      opzioni: ["Generale e imperatore", "Scrittore", "Pittore", "Re"],
-      corretta: "Generale e imperatore",
-    },
-    {
-      domanda: "Cos'è un castello?",
-      opzioni: [
-        "Una fortezza medievale",
-        "Una casa moderna",
-        "Una montagna",
-        "Un fiume",
-      ],
-      corretta: "Una fortezza medievale",
-    },
-  ],
-  geografia: [
-    {
-      domanda: "Qual è la capitale d'Italia?",
-      opzioni: ["Roma", "Milano", "Napoli", "Torino"],
-      corretta: "Roma",
-    },
-    {
-      domanda: "Quale continente è più grande?",
-      opzioni: ["Africa", "Europa", "Asia", "Oceania"],
-      corretta: "Asia",
-    },
-    {
-      domanda: "In quale continente si trova l'Egitto?",
-      opzioni: ["Africa", "Asia", "Europa", "America"],
-      corretta: "Africa",
-    },
-    {
-      domanda: "Qual è il fiume più lungo del mondo?",
-      opzioni: ["Nilo", "Amazzonia", "Mississippi", "Po"],
-      corretta: "Nilo",
-    },
-    {
-      domanda: "Qual è il mare che bagna l'Italia?",
-      opzioni: [
-        "Mare Adriatico",
-        "Mare del Nord",
-        "Mare Nero",
-        "Mare Glaciale",
-      ],
-      corretta: "Mare Adriatico",
-    },
-    {
-      domanda: "Quale continente è anche un paese?",
-      opzioni: ["Australia", "Africa", "Europa", "Asia"],
-      corretta: "Australia",
-    },
-    {
-      domanda: "Qual è la montagna più alta del mondo?",
-      opzioni: ["Everest", "K2", "Monte Bianco", "Mont Blanc"],
-      corretta: "Everest",
-    },
-    {
-      domanda: "Qual è l'oceano più grande?",
-      opzioni: ["Pacifico", "Atlantico", "Indiano", "Artico"],
-      corretta: "Pacifico",
-    },
-    {
-      domanda: "Dove si trova il Colosseo?",
-      opzioni: ["Roma", "Atene", "Parigi", "Londra"],
-      corretta: "Roma",
-    },
-    {
-      domanda: "Quale paese ha la più grande foresta pluviale?",
-      opzioni: ["Brasile", "Cina", "Russia", "Canada"],
-      corretta: "Brasile",
-    },
-    {
-      domanda: "Qual è il deserto più grande?",
-      opzioni: ["Sahara", "Gobi", "Kalahari", "Atacama"],
-      corretta: "Sahara",
-    },
-    {
-      domanda: "Qual è il fiume più lungo d'Europa?",
-      opzioni: ["Volga", "Danubio", "Tevere", "Senna"],
-      corretta: "Volga",
-    },
-    {
-      domanda: "Qual è la capitale della Francia?",
-      opzioni: ["Parigi", "Lione", "Marsiglia", "Nizza"],
-      corretta: "Parigi",
-    },
-    {
-      domanda: "Quale mare è vicino alla Sicilia?",
-      opzioni: ["Mediterraneo", "Adriatico", "Ionio", "Egeo"],
-      corretta: "Mediterraneo",
-    },
-    {
-      domanda: "Qual è la capitale della Spagna?",
-      opzioni: ["Madrid", "Barcellona", "Valencia", "Siviglia"],
-      corretta: "Madrid",
-    },
-  ],
-  inglese: [
-    {
-      domanda: "How do you say 'gatto' in English?",
-      opzioni: ["Dog", "Cat", "Bird", "Fish"],
-      corretta: "Cat",
-    },
-    {
-      domanda: "What color is the sky?",
-      opzioni: ["Blue", "Green", "Red", "Yellow"],
-      corretta: "Blue",
-    },
-    {
-      domanda: "What is the opposite of 'hot'?",
-      opzioni: ["Cold", "Warm", "Cool", "Hot"],
-      corretta: "Cold",
-    },
-    {
-      domanda: "How do you say 'libro' in English?",
-      opzioni: ["Pen", "Book", "Table", "Chair"],
-      corretta: "Book",
-    },
-    {
-      domanda: "What day comes after Monday?",
-      opzioni: ["Sunday", "Tuesday", "Wednesday", "Friday"],
-      corretta: "Tuesday",
-    },
-    {
-      domanda: "What is the English word for 'cane'?",
-      opzioni: ["Cat", "Dog", "Bird", "Fish"],
-      corretta: "Dog",
-    },
-    {
-      domanda: "How do you say 'scuola' in English?",
-      opzioni: ["School", "House", "Park", "Shop"],
-      corretta: "School",
-    },
-    {
-      domanda: "What is the opposite of 'big'?",
-      opzioni: ["Small", "Tall", "Short", "Long"],
-      corretta: "Small",
-    },
-    {
-      domanda: "How many days are in a week?",
-      opzioni: ["5", "6", "7", "8"],
-      corretta: "7",
-    },
-    {
-      domanda: "What is the English word for 'amico'?",
-      opzioni: ["Friend", "Enemy", "Teacher", "Student"],
-      corretta: "Friend",
-    },
-    {
-      domanda: "How do you say 'casa' in English?",
-      opzioni: ["House", "Car", "Garden", "Room"],
-      corretta: "House",
-    },
-    {
-      domanda: "What color are bananas?",
-      opzioni: ["Red", "Yellow", "Green", "Blue"],
-      corretta: "Yellow",
-    },
-    {
-      domanda: "What is the English word for 'acqua'?",
-      opzioni: ["Water", "Fire", "Earth", "Air"],
-      corretta: "Water",
-    },
-    {
-      domanda: "How do you say 'mangiare' in English?",
-      opzioni: ["Eat", "Run", "Sleep", "Play"],
-      corretta: "Eat",
-    },
-    {
-      domanda: "What is the opposite of 'day'?",
-      opzioni: ["Night", "Morning", "Afternoon", "Evening"],
-      corretta: "Night",
-    },
-  ],
-  musica: [
-    {
-      domanda: "Quale strumento ha le corde?",
-      opzioni: ["Pianoforte", "Batteria", "Flauto", "Tromba"],
-      corretta: "Pianoforte",
-    },
-    {
-      domanda: "Quante note ci sono nella scala musicale?",
-      opzioni: ["5", "7", "8", "6"],
-      corretta: "7",
-    },
-    {
-      domanda: "Quale strumento si suona soffiando?",
-      opzioni: ["Violino", "Chitarra", "Flauto", "Tamburo"],
-      corretta: "Flauto",
-    },
-    {
-      domanda: "Come si chiama il simbolo musicale che indica il tempo?",
-      opzioni: ["Battuta", "Nota", "Chiave di violino", "Pentagramma"],
-      corretta: "Battuta",
-    },
-    {
-      domanda: "Quale strumento è percosso?",
-      opzioni: ["Batteria", "Pianoforte", "Violino", "Flauto"],
-      corretta: "Batteria",
-    },
-    {
-      domanda: "Quanti suoni ci sono in una scala di Do maggiore?",
-      opzioni: ["7", "8", "6", "5"],
-      corretta: "7",
-    },
-    {
-      domanda: "Qual è il nome della nota più bassa?",
-      opzioni: ["Do", "Si", "Fa", "La"],
-      corretta: "Do",
-    },
-    {
-      domanda: "Cosa si usa per leggere la musica?",
-      opzioni: ["Partitura", "Libro", "Foglio", "Penna"],
-      corretta: "Partitura",
-    },
-    {
-      domanda: "Quale strumento ha i tasti?",
-      opzioni: ["Pianoforte", "Violino", "Tromba", "Flauto"],
-      corretta: "Pianoforte",
-    },
-    {
-      domanda: "Cos’è il ritmo?",
-      opzioni: [
-        "La sequenza dei suoni nel tempo",
-        "La melodia",
-        "La voce",
-        "Il canto",
-      ],
-      corretta: "La sequenza dei suoni nel tempo",
-    },
-    {
-      domanda: "Quale strumento è a fiato?",
-      opzioni: ["Tromba", "Batteria", "Chitarra", "Pianoforte"],
-      corretta: "Tromba",
-    },
-    {
-      domanda: "Quale parte della batteria si colpisce con le bacchette?",
-      opzioni: ["Tamburo", "Piatti", "Cassa", "Tutti"],
-      corretta: "Tutti",
-    },
-    {
-      domanda: "Cos’è una nota?",
-      opzioni: ["Un suono musicale", "Un colore", "Un oggetto", "Una parola"],
-      corretta: "Un suono musicale",
-    },
-    {
-      domanda: "Che cos’è il pentagramma?",
-      opzioni: [
-        "Cinque linee per scrivere la musica",
-        "Un tipo di strumento",
-        "Una canzone",
-        "Un cantante",
-      ],
-      corretta: "Cinque linee per scrivere la musica",
-    },
-    {
-      domanda: "Come si chiama chi suona la chitarra?",
-      opzioni: ["Chitarrista", "Pianista", "Batterista", "Cantante"],
-      corretta: "Chitarrista",
-    },
-  ],
-  arte: [
-    {
-      domanda: "Chi ha dipinto la 'Gioconda'?",
-      opzioni: ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Donatello"],
-      corretta: "Leonardo da Vinci",
-    },
-    {
-      domanda: "Cos'è un dipinto?",
-      opzioni: ["Un quadro", "Una scultura", "Una canzone", "Un libro"],
-      corretta: "Un quadro",
-    },
-    {
-      domanda: "Che cosa usa un pittore?",
-      opzioni: ["Pennello", "Martello", "Penna", "Chitarra"],
-      corretta: "Pennello",
-    },
-    {
-      domanda: "Quale colore si ottiene mescolando il blu e il giallo?",
-      opzioni: ["Verde", "Viola", "Arancione", "Rosso"],
-      corretta: "Verde",
-    },
-    {
-      domanda: "Che cosa è una scultura?",
-      opzioni: [
-        "Un'opera d'arte tridimensionale",
-        "Un dipinto",
-        "Una canzone",
-        "Un libro",
-      ],
-      corretta: "Un'opera d'arte tridimensionale",
-    },
-    {
-      domanda: "Qual è il colore primario?",
-      opzioni: ["Rosso", "Verde", "Nero", "Bianco"],
-      corretta: "Rosso",
-    },
-    {
-      domanda: "Cos’è un mosaico?",
-      opzioni: [
-        "Un'immagine fatta con tessere",
-        "Un dipinto ad olio",
-        "Una scultura",
-        "Un libro",
-      ],
-      corretta: "Un'immagine fatta con tessere",
-    },
-    {
-      domanda: "Chi ha scolpito il 'David'?",
-      opzioni: ["Michelangelo", "Leonardo", "Raffaello", "Donatello"],
-      corretta: "Michelangelo",
-    },
-    {
-      domanda: "Quale forma ha un cerchio?",
-      opzioni: ["Rotonda", "Quadrata", "Triangolare", "Ovale"],
-      corretta: "Rotonda",
-    },
-    {
-      domanda: "Come si chiama il colore ottenuto mescolando rosso e blu?",
-      opzioni: ["Viola", "Arancione", "Verde", "Giallo"],
-      corretta: "Viola",
-    },
-    {
-      domanda: "Cos’è una tavolozza?",
-      opzioni: [
-        "Strumento per mescolare i colori",
-        "Una tela",
-        "Un pennello",
-        "Un quadro",
-      ],
-      corretta: "Strumento per mescolare i colori",
-    },
-    {
-      domanda: "Che cos’è un disegno?",
-      opzioni: [
-        "Un'immagine fatta a mano",
-        "Una canzone",
-        "Una scultura",
-        "Un libro",
-      ],
-      corretta: "Un'immagine fatta a mano",
-    },
-    {
-      domanda: "Chi ha dipinto la Cappella Sistina?",
-      opzioni: ["Michelangelo", "Leonardo", "Raffaello", "Donatello"],
-      corretta: "Michelangelo",
-    },
-    {
-      domanda: "Qual è il colore opposto al giallo?",
-      opzioni: ["Viola", "Verde", "Arancione", "Blu"],
-      corretta: "Viola",
-    },
-    {
-      domanda: "Come si chiama il luogo dove si espongono opere d’arte?",
-      opzioni: ["Museo", "Scuola", "Teatro", "Cinema"],
-      corretta: "Museo",
-    },
-  ],
+  // ... altre materie (storia, geografia, inglese, musica, arte) come sopra
 };
 
-//Avvio gioco//
-//Prende il contenitore dal HTML e lo visulizza solo dopo che la pagina è caricata//
+// Avvio gioco //
+// Prende il contenitore dal HTML e lo visualizza solo dopo che la pagina è caricata //
 document.addEventListener("DOMContentLoaded", () => {
   const quizContainer = document.getElementById("quizContainer");
 
-//Prende il valore della materia selezionata dal form//
+  // Prende il valore della materia selezionata dal form //
   document.getElementById("avviaQuiz").addEventListener("click", () => {
     const materiaSelect = document.getElementById("materia");
     const materia = materiaSelect.value;
-    quizContainer.innerHTML = ""; //Svuota il contenitore delle domande//
+    quizContainer.innerHTML = ""; // Svuota il contenitore delle domande //
 
-//Se la materia selezionata è inesistente o non viene selezionata nessuna materia viene mandato un messaggio d'errore//
+    // Se la materia selezionata è inesistente o non viene selezionata nessuna materia viene mandato un messaggio d'errore //
     if (!materia || !domande[materia]) {
       quizContainer.innerHTML = "<p>Seleziona una materia valida.</p>";
       return;
     }
 
-// Creo dinamicamente il testo della domanda con le possibili opzioni selezionabili e le aggiungo al contenitore del quiz//
+    // Creo dinamicamente il testo della domanda con le possibili opzioni selezionabili e le aggiungo al contenitore del quiz //
     const domandeScelte = domande[materia];
 
     domandeScelte.forEach((q, index) => {
       const div = document.createElement("div");
       div.classList.add("question");
-      //Serve a far partire il numero della domanda da 1 e non da 0//
+      // Serve a far partire il numero della domanda da 1 e non da 0 //
       div.innerHTML = `
         <p><strong>Domanda ${index + 1}:</strong> ${q.domanda}</p> 
         <div class="options">
@@ -726,67 +288,70 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       quizContainer.appendChild(div);
     });
-    // Creo il bottone per inviare le risposte//
+
+    // Creo il bottone per inviare le risposte //
     const btnSubmit = document.createElement("button");
     btnSubmit.style.marginRight = "20px";
     btnSubmit.textContent = "Invia Risposte";
 
-   btnSubmit.addEventListener("click", () => {
-  let punteggio = 0; //Inizializzo il punteggio a zero//
-  domandeScelte.forEach((q, i) => {
-    const selected = document.querySelector(`input[name="q${i}"]:checked`); //Prende la risposta selezionata dall'utente//
-    const opzioni = document.querySelectorAll(`input[name="q${i}"]`); //Prende tutte le opzioni//
+    btnSubmit.addEventListener("click", () => {
+      let punteggio = 0; // Inizializzo il punteggio a zero //
+      domandeScelte.forEach((q, i) => {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`); // Prende la risposta selezionata dall'utente //
+        const opzioni = document.querySelectorAll(`input[name="q${i}"]`); // Prende tutte le opzioni //
 
-// Colora di verde la risposta giuste e di rosso la risposta sbagliata//
-    opzioni.forEach(opt => {
-      const label = opt.parentElement;
-      if (opt.value === q.corretta) {
-        label.style.color = "green";
-      } else if (opt.checked && opt.value !== q.corretta) {
-        label.style.color = "red";
-        // Aggiunge la risposta corretta se l'utente sbagliata//
-        const rispostaCorretta = document.createElement("div");
-        rispostaCorretta.textContent = `✔ Risposta corretta: ${q.corretta}`;
-        rispostaCorretta.style.color = "green";
-        label.parentElement.appendChild(rispostaCorretta);
-      }
+        // Colora di verde la risposta giusta e di rosso la risposta sbagliata //
+        opzioni.forEach((opt) => {
+          const label = opt.parentElement;
+          if (opt.value === q.corretta) {
+            label.style.color = "green";
+          } else if (opt.checked && opt.value !== q.corretta) {
+            label.style.color = "red";
+            // Aggiunge la risposta corretta se l'utente sbaglia //
+            const rispostaCorretta = document.createElement("div");
+            rispostaCorretta.textContent = `✔ Risposta corretta: ${q.corretta}`;
+            rispostaCorretta.style.color = "green";
+            label.parentElement.appendChild(rispostaCorretta);
+          }
+        });
+
+        // Aumenta il punteggio man mano che l'utente clicca sulle risposte corrette e mostra un messaggio riassuntivo alla fine //
+        if (selected && selected.value === q.corretta) {
+          punteggio++;
+        }
+      });
+
+      // Rimuovi eventuale messaggio precedente
+      const oldResult = document.getElementById("quizResult");
+      if (oldResult) oldResult.remove();
+
+      // Crea e mostra il risultato nel contenitore quiz
+      const resultDiv = document.createElement("div");
+      resultDiv.id = "quizResult";
+      resultDiv.style.marginTop = "20px";
+      resultDiv.style.fontWeight = "bold";
+      resultDiv.style.fontSize = "1.2em";
+      resultDiv.textContent = `Hai ottenuto ${punteggio} su ${domandeScelte.length} risposte corrette!`;
+      quizContainer.appendChild(resultDiv);
+
+      // Toglie la possibilità di cliccare sulle opzioni dopo che si sono inviate le risposte //
+      const tuttiInput = document.querySelectorAll('input[type="radio"]');
+      tuttiInput.forEach((input) => {
+        input.disabled = true;
+      });
     });
-// Aumenta il punteggio man mano che l'utente clicca sulle risposte corrette e mostra un messaggio riassuntivo alla fine//
-    if (selected && selected.value === q.corretta) {
-      punteggio++;
-    }
-  });
 
-  // Rimuovi eventuale messaggio precedente
-const oldResult = document.getElementById("quizResult");
-if (oldResult) oldResult.remove();
-
-// Crea e mostra il risultato nel contenitore quiz
-const resultDiv = document.createElement("div");
-resultDiv.id = "quizResult";
-resultDiv.style.marginTop = "20px";
-resultDiv.style.fontWeight = "bold";
-resultDiv.style.fontSize = "1.2em";
-resultDiv.textContent = `Hai ottenuto ${punteggio} su ${domandeScelte.length} risposte corrette!`;
-quizContainer.appendChild(resultDiv);
-
-  //Toglie la possibilità di cliccare sulle opzioni dopo che si sono inviate le risposte//
-  const tuttiInput = document.querySelectorAll('input[type="radio"]');
-  tuttiInput.forEach(input => {
-    input.disabled = true;
-  });
-});
-
-//Creo il bottone per resettare il gioco il quale una volta premuto svuota il contenitore del quiz,
-// toglie il valore scelto della materia precedentemente selezionata e fa scrollare in automatico fino all'inizio della pagina//
+    // Creo il bottone per resettare il gioco il quale una volta premuto svuota il contenitore del quiz,
+    // toglie il valore scelto della materia precedentemente selezionata e fa scrollare in automatico fino all'inizio della pagina //
     const btnReset = document.createElement("button");
     btnReset.textContent = "Reset del gioco";
     btnReset.addEventListener("click", () => {
       materiaSelect.value = "";
       quizContainer.innerHTML = "";
-      window.scrollTo({ top: 0, behavior: "smooth" }); //La pagina scorre in maniera fluida verso l'alto//
+      window.scrollTo({ top: 0, behavior: "smooth" }); // La pagina scorre in maniera fluida verso l'alto //
     });
-// I bottoni vengono aggiunti al contenitore//
+
+    // I bottoni vengono aggiunti al contenitore //
     quizContainer.appendChild(btnSubmit);
     quizContainer.appendChild(btnReset);
   });

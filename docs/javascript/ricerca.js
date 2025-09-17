@@ -5,19 +5,41 @@ async function loadBooksBySearch() {
   const categoryTitle = document.getElementById('categoryTitle');
   const container = document.getElementById('booksContainer');
 
+  // Crea loader se non esiste
+  let loader = document.getElementById('loader');
+  if (!loader) {
+    loader = document.createElement('div');
+    loader.id = 'loader';
+    loader.className = 'text-center my-5';
+    loader.innerHTML = `
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Caricamento...</span>
+      </div>
+      <p>Caricamento dei risultati, attendere...</p>
+    `;
+    container.parentNode.insertBefore(loader, container);
+  }
+
   if (!category) {
     categoryTitle.textContent = 'Nessuna ricerca specificata.';
     container.innerHTML = '';
+    loader.style.display = 'none';
     return;
   }
 
   categoryTitle.textContent = `Risultati per: ${category}`;
   container.innerHTML = '';
 
+  // Mostra loader
+  loader.style.display = 'block';
+
   try {
-    // 🔹 ricerca libera (titoli, autori, parole chiave)
-    const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(category)}`);
-    const data = await res.json();
+    // 🔹 ricerca libera (titoli, autori, parole chiave) usando axios
+    const res = await axios.get(`https://openlibrary.org/search.json?q=${encodeURIComponent(category)}`);
+    const data = res.data;
+
+    // Nascondi loader appena arrivano i dati
+    loader.style.display = 'none';
 
     if (!data.docs || data.docs.length === 0) {
       container.innerHTML = '<p>Nessun libro trovato.</p>';
@@ -68,8 +90,9 @@ async function loadBooksBySearch() {
           btnDesc.textContent = 'Caricamento...';
 
           try {
-            const detailsRes = await fetch(`https://openlibrary.org${key}.json`);
-            const details = await detailsRes.json();
+            // Usa axios anche per la chiamata ai dettagli
+            const detailsRes = await axios.get(`https://openlibrary.org${key}.json`);
+            const details = detailsRes.data;
 
             let description = 'Descrizione non disponibile.';
             if (typeof details.description === 'string') {
@@ -126,6 +149,7 @@ async function loadBooksBySearch() {
 
   } catch (err) {
     console.error(err);
+    loader.style.display = 'none';
     container.innerHTML = '<p>Errore nel recupero dei dati.</p>';
   }
 }
