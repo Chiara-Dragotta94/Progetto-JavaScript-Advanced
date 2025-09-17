@@ -29,7 +29,7 @@ Owly permette anche agli insegnanti di condividere comunicazioni e avvisi, così
 - JavaScript  
 - API Open Library  
 - Axios 
-
+- Lodash
 ---
 
 ## Struttura del Progetto
