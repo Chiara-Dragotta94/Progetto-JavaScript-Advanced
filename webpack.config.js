@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  // Modalità di sviluppo (usa 'production' quando fai il deploy)
+  // Modalità di sviluppo
   mode: 'development',
 
   // File principale da cui partire
@@ -9,23 +9,23 @@ module.exports = {
 
   // Dove mettere il bundle finale
   output: {
-    filename: 'bundle.js',           // Nome del file bundle
+    filename: 'bundle.js',                       // Nome del bundle
     path: path.resolve(__dirname, 'javascript'), // Lo mettiamo nella stessa cartella js
-    clean: true,                     // Pulisce il bundle precedente
+    clean: true,                                 // Pulisce il bundle precedente
   },
 
   module: {
     rules: [
       {
-        test: /\.css$/i,            // Gestione file CSS
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,        // Gestione file SCSS
+        test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, // Gestione immagini
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
           filename: '../img/[name][ext]', // Mantieni le immagini nella cartella img
@@ -34,14 +34,14 @@ module.exports = {
     ],
   },
 
-  devtool: 'source-map',            // Aiuta per il debug
+  devtool: 'source-map', // Aiuta per il debug
 
   devServer: {
     static: {
-      directory: path.join(__dirname),
+      directory: path.join(__dirname), // Serve tutta la root del progetto
     },
     compress: true,
-    port: 9000,                     // Porta locale per il server di sviluppo
-    open: true,                      // Apre il browser automaticamente
+    port: 9000,
+    open: true,
   },
 };
