@@ -1,18 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  function searchBooks() {
-    const inputEl = document.getElementById('categoryInput');
-    if (!inputEl) return;
-    const category = inputEl.value.trim();
-    if (!category) return;
-    localStorage.setItem('searchCategory', encodeURIComponent(category.toLowerCase()));
-    window.location.href = "ricerca.html";
-  }
-
   const categoryInput = document.getElementById('categoryInput');
   if (categoryInput) {
     categoryInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        searchBooks();
+      if (e.key === 'Enter' && typeof window.searchBooks === 'function') {
+        window.searchBooks();
       }
     });
   }
@@ -30,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const searchBtn = document.querySelector('button.btn');
-  if (searchBtn && categoryInput) {
-    searchBtn.addEventListener('click', searchBooks);
+  const searchBtn = document.getElementById('searchButton');
+  if (searchBtn && typeof window.searchBooks === 'function') {
+    searchBtn.addEventListener('click', window.searchBooks);
   }
 });

@@ -1,16 +1,28 @@
 // Al caricamento della pagina si visualizzano due colonne di associazioni immagine-concetto
+import _ from 'lodash';
+import imgAquilone from '../img/aquilone.jpg';
+import imgCestino from '../img/cestino.png';
+import imgChiavi from '../img/chiavi.jpg';
+import imgGiraffa from '../img/giraffa.jpg';
+import imgImpronte from '../img/impronte.jpg';
+import imgMatita from '../img/matita.jpg';
+import imgNuvola from '../img/nuvola.webp';
+import imgOrologio from '../img/orologio.png';
+import imgSemaforo from '../img/semaforo.png';
+import imgUova from '../img/uova.jpg';
+
 document.addEventListener("DOMContentLoaded", () => {
   const associazioni = [
-    { immagine: "./img/aquilone.jpg", concetto: "Vento" },
-    { immagine: "./img/cestino.png", concetto: "Riciclo" },
-    { immagine: "./img/chiavi.jpg", concetto: "Aprire" },
-    { immagine: "./img/giraffa.jpg", concetto: "Collo lungo" },
-    { immagine: "./img/impronte.jpg", concetto: "Animale" },
-    { immagine: "./img/matita.jpg", concetto: "Temperamatite" },
-    { immagine: "./img/nuvola.webp", concetto: "Pioggia" },
-    { immagine: "./img/orologio.png", concetto: "Tempo" },
-    { immagine: "./img/semaforo.png", concetto: "Regole" },
-    { immagine: "./img/uova.jpg", concetto: "Gallina" }
+    { immagine: imgAquilone, concetto: "Vento" },
+    { immagine: imgCestino, concetto: "Riciclo" },
+    { immagine: imgChiavi, concetto: "Aprire" },
+    { immagine: imgGiraffa, concetto: "Collo lungo" },
+    { immagine: imgImpronte, concetto: "Animale" },
+    { immagine: imgMatita, concetto: "Temperamatite" },
+    { immagine: imgNuvola, concetto: "Pioggia" },
+    { immagine: imgOrologio, concetto: "Tempo" },
+    { immagine: imgSemaforo, concetto: "Regole" },
+    { immagine: imgUova, concetto: "Gallina" }
   ];
 
   let selezioneImmagine = null; // memorizza l’immagine scelta dall’utente

@@ -1,4 +1,6 @@
 // Aspetta che tutto il contenuto della pagina sia completamente caricato prima di eseguire il codice JavaScript
+import _ from 'lodash';
+
 document.addEventListener("DOMContentLoaded", function () {
   // Recupera i form da HTML
   const contactForm = document.getElementById("contactForm");
