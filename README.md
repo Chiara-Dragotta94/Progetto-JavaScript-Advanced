@@ -54,6 +54,7 @@ Owly permette anche agli insegnanti di condividere comunicazioni e avvisi, così
 │ ├─ style.css.map
 │ └─ style.scss
 └─ img/ # Immagini per contenuti e interfaccia
+
 ---
 
 ## Istruzioni per l’Uso
