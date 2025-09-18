@@ -33,7 +33,6 @@ Owly permette anche agli insegnanti di condividere comunicazioni e avvisi, così
 ---
 
 ## Struttura del Progetto
-docs/
 ├─ index.html # Home page
 ├─ ricerca.html # Pagina ricerca libri
 ├─ quiz.html # Quiz interattivi
