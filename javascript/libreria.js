@@ -1,28 +1,37 @@
-function searchBooks() {
-  const category = document.getElementById('categoryInput').value.trim();
-  if (!category) return;
-  // Salva la categoria codificata in localStorage
-  localStorage.setItem('searchCategory', encodeURIComponent(category.toLowerCase()));
-  window.location.href = "ricerca.html";
-}
-
-// Attiva ricerca anche premendo "Invio"
-document.getElementById('categoryInput').addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
-    searchBooks();
+document.addEventListener('DOMContentLoaded', () => {
+  function searchBooks() {
+    const inputEl = document.getElementById('categoryInput');
+    if (!inputEl) return;
+    const category = inputEl.value.trim();
+    if (!category) return;
+    localStorage.setItem('searchCategory', encodeURIComponent(category.toLowerCase()));
+    window.location.href = "ricerca.html";
   }
-});
 
-// Funzione per attivare la ricerca per categoria cliccando sui singoli bottoni
-const buttons = document.querySelectorAll('.book');
-
-buttons.forEach(btn => {
-  if (btn.textContent.trim() !== '') {
-    btn.addEventListener('click', () => {
-      const category = btn.textContent.trim().toLowerCase();
-      // Salva la categoria codificata in localStorage
-      localStorage.setItem('searchCategory', encodeURIComponent(category));
-      window.location.href = "ricerca.html";
+  const categoryInput = document.getElementById('categoryInput');
+  if (categoryInput) {
+    categoryInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchBooks();
+      }
     });
+  }
+
+  const buttons = document.querySelectorAll('.book');
+  if (buttons && buttons.length > 0) {
+    buttons.forEach(btn => {
+      if (btn.textContent.trim() !== '') {
+        btn.addEventListener('click', () => {
+          const category = btn.textContent.trim().toLowerCase();
+          localStorage.setItem('searchCategory', encodeURIComponent(category));
+          window.location.href = "ricerca.html";
+        });
+      }
+    });
+  }
+
+  const searchBtn = document.querySelector('button.btn');
+  if (searchBtn && categoryInput) {
+    searchBtn.addEventListener('click', searchBooks);
   }
 });
