@@ -1,6 +1,4 @@
 // Aspetta che l'intero contenuto della pagina sia caricato prima di eseguire lo script
-import _ from 'lodash';
-
 document.addEventListener("DOMContentLoaded", () => {
 
   // Prende il box delle curiosità (inizialmente nascosto)

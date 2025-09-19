@@ -1,66 +1,47 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = (env, argv) => {
-  const isProd = argv.mode === 'production';
+module.exports = {
+  // Modalità di sviluppo
+  mode: 'development',
 
-  return {
-    // File principale da cui partire
-    entry: './javascript/index.js',
+  // File principale da cui partire
+  entry: './javascript/index.js',
 
-    // Dove mettere il bundle finale
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'javascript'),
-      publicPath: '/javascript/',
-      clean: true,
-    },
+  // Dove mettere il bundle finale
+  output: {
+    filename: 'bundle.js',                       // Nome del bundle
+    path: path.resolve(__dirname, 'javascript'), // Lo mettiamo nella stessa cartella js
+    clean: true,                                 // Pulisce il bundle precedente
+  },
 
-    module: {
-      rules: [
-        {
-          test: /\.css$/i,
-          use: [isProd ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
-        },
-        {
-          test: /\.s[ac]ss$/i,
-          use: [isProd ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader'],
-        },
-        {
-          test: /\.(png|jpe?g|gif|svg)$/i,
-          type: 'asset/resource',
-          generator: {
-            filename: '../img/[name][ext]',
-          },
-        },
-      ],
-    },
-
-    plugins: isProd
-      ? [
-          new MiniCssExtractPlugin({
-            filename: '../styles/style.css',
-          }),
-        ]
-      : [],
-
-    devtool: isProd ? false : 'source-map',
-
-    optimization: {
-      splitChunks: false,
-      runtimeChunk: false,
-    },
-
-    devServer: {
-      static: {
-        directory: path.join(__dirname),
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
-      compress: true,
-      port: 9000,
-      open: true,
-      devMiddleware: {
-        writeToDisk: false,
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: '../img/[name][ext]', // Mantieni le immagini nella cartella img
+        },
+      },
+    ],
+  },
+
+  devtool: 'source-map', // Aiuta per il debug
+
+  devServer: {
+    static: {
+      directory: path.join(__dirname), // Serve tutta la root del progetto
     },
-  };
+    compress: true,
+    port: 9000,
+    open: true,
+  },
 };

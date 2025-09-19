@@ -9,15 +9,11 @@
   },
   "author": "Chiara Dragotta",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.7",
-    "lodash": "^4.17.21"
-  },
   "devDependencies": {
-    "mini-css-extract-plugin": "^2.9.2",
     "webpack": "^5.101.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.0",
+    "style-loader": "^3.3.2",
     "css-loader": "^6.8.1",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2"

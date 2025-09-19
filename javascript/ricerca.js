@@ -1,6 +1,4 @@
 // Funzione asincrona per caricare i libri in base alla ricerca libera
-import axios from 'axios';
-
 async function loadBooksBySearch() {
   // Recupero e decodifico quello che ho salvato nella home
   const category = decodeURIComponent(localStorage.getItem('searchCategory'));
