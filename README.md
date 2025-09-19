@@ -30,16 +30,16 @@ Owly è una piattaforma pensata per supportare lo studio dei bambini e migliorar
 - accedi.html # Login utenti
 - registrazione.html # Registrazione utenti
 - javascript/
--- ricerca.js
--- quiz.js
--- mondo.js
--- associazioni.js
--- form.js
--- libreria.js # Gestione API Open Library
+- - ricerca.js
+- - quiz.js
+- - mondo.js
+- - associazioni.js
+- - form.js
+- - libreria.js # Gestione API Open Library
 - styles/
--- style.css
--- style.css.map
--- style.scss
+- - style.css
+- - style.css.map
+- - style.scss
 - img/ # Immagini per contenuti e interfaccia
 
 ---
